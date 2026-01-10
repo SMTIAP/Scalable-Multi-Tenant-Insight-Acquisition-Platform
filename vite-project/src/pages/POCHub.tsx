@@ -49,7 +49,7 @@ const POCHub = () => {
         <ul>
           <li>Click any POC card to view its implementation.</li>
           <li>Each POC includes working code examples</li>
-          <li>APIs and integrations are ready to test</li>
+          <li>APIs and integrations to test</li>
         </ul>
       </div>
     </div>
