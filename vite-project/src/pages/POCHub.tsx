@@ -10,7 +10,7 @@ const POCHub = () => {
     { id: 3, title: 'AI Analytical Tools', icon: '🤖', description: 'Machine learning and analytics', color: '#2196F3' },
     { id: 4, title: 'Send/Receive Emails', icon: '📧', description: 'Email automation and management', color: '#FF9800' },
     { id: 5, title: 'Social Logins', icon: '🔐', description: 'OAuth with Google, Facebook, etc.', color: '#9C27B0' },
-    { id: 6, title: 'Payment Processing', icon: '💳', description: 'Stripe, PayPal integrations', color: '#673AB7' },
+    { id: 6, title: 'Payment Processing', icon: '💳', description: 'Stripe, PayPal integrations', color: '#673AB7', path: '/poc/PaymentPOC' },
     { id: 7, title: 'Password Hashing', icon: '🔒', description: 'Secure password storage', color: '#F44336' },
   ];
 
@@ -30,7 +30,7 @@ const POCHub = () => {
             key={poc.id}
             className="poc-card"
             style={{ '--card-color': poc.color } as React.CSSProperties}
-            onClick={() => alert(`Navigating to ${poc.title} POC - Implement this navigation!`)}
+            onClick={() => navigate(poc.path as string)}
           >
             <div className="poc-icon" style={{ backgroundColor: `${poc.color}20` }}>
               <span style={{ color: poc.color, fontSize: '2rem' }}>{poc.icon}</span>
