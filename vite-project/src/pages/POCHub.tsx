@@ -45,12 +45,11 @@ const POCHub = () => {
       </div>
 
       <div className="instructions">
-        <h3>📋 Implementation Instructions</h3>
+        <h3>📋 Implementation Details:</h3>
         <ul>
-          <li>Click any POC card to view its implementation</li>
+          <li>Click any POC card to view its implementation.</li>
           <li>Each POC includes working code examples</li>
           <li>APIs and integrations are ready to test</li>
-          <li>Copy code snippets for your projects</li>
         </ul>
       </div>
     </div>
