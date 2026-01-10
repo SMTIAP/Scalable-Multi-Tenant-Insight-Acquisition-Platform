@@ -13,13 +13,15 @@ const HomePage = () => {
         </p>
         
         <div className="cta-section">
-          <button 
-            className="poc-button"
-            onClick={() => navigate('/poc-hub')}
-          >
-            <span className="button-text">View POCs</span>
-            <span className="button-icon">🚀</span>
-          </button>
+          <div className="button-group">
+            <button 
+              className="poc-button"
+              onClick={() => navigate('/poc-hub')}
+            >
+              <span className="button-text">View POCs</span>
+              <span className="button-icon">🚀</span>
+            </button>
+          </div>
           
           <p className="cta-description">
             Access implementations of AI Analytics, QR codes, authentication, payments, and other POCs.

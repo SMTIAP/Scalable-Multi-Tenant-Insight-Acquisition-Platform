@@ -1,0 +1,7 @@
+[
+  { "id": 1, "text": "The service was excellent and the staff was very friendly. I will definitely come back!", "category": "General" },
+  { "id": 2, "text": "I am very disappointed with the product quality. It broke after two days.", "category": "Product" },
+  { "id": 3, "text": "It was okay, nothing special but not bad either. Average experience.", "category": "General" },
+  { "id": 4, "text": "The delivery was late, but the customer support team was helpful in resolving the issue.", "category": "Support" },
+  { "id": 5, "text": "I love the new features! Especially the dark mode.", "category": "Product" }
+]

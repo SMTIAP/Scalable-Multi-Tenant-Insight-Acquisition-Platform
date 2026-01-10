@@ -30,16 +30,26 @@ const POCHub = () => {
             key={poc.id}
             className="poc-card"
             style={{ '--card-color': poc.color } as React.CSSProperties}
-            onClick={() => navigate(poc.path as string)}
+            onClick={() => {
+              if (poc.path) {
+                navigate(poc.path);
+              } else if (poc.id === 3) {
+                navigate('/data-analysis');
+              } else {
+                alert(`Navigating to ${poc.title} POC - Implement this navigation!`);
+              }
+            }}
           >
             <div className="poc-icon" style={{ backgroundColor: `${poc.color}20` }}>
               <span style={{ color: poc.color, fontSize: '2rem' }}>{poc.icon}</span>
             </div>
             <h3>{poc.title}</h3>
             <p>{poc.description}</p>
-            <div className="poc-status">
-              <span className="status-label">Coming Soon</span>
-            </div>
+            {poc.id !== 3 && (
+              <div className="poc-status">
+                <span className="status-label">Coming Soon</span>
+              </div>
+            )}
           </button>
         ))}
       </div>

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import POCHub from './pages/POCHub';
 import PaymentPOC from './pages/poc/PaymentPOC';
+import DataAnalysisPage from './pages/DataAnalysis';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/poc-hub" element={<POCHub />} />
+        <Route path="/data-analysis" element={<DataAnalysisPage />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/poc/PaymentPOC" element={<PaymentPOC />} />
       </Routes>
