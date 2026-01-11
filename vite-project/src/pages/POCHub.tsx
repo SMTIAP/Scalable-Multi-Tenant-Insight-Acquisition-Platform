@@ -5,7 +5,7 @@ const POCHub = () => {
   const navigate = useNavigate();
 
   const pocList = [
-    { id: 1, title: 'QR Code Generator', icon: '📱', description: 'Generate and scan QR codes', color: '#4CAF50' },
+    { id: 1, title: 'QR Code Generator', icon: '📱', description: 'Generate and scan QR codes', color: '#4CAF50' , path: '/poc/qrPOC' },
     { id: 2, title: 'Cloudflare Integration', icon: '☁️', description: 'CDN, security, and edge computing', color: '#F48024' },
     { id: 3, title: 'AI Analytical Tools', icon: '🤖', description: 'Machine learning and analytics', color: '#2196F3' },
     { id: 4, title: 'Send/Receive Emails', icon: '📧', description: 'Email automation and management', color: '#FF9800' },
@@ -45,7 +45,7 @@ const POCHub = () => {
             </div>
             <h3>{poc.title}</h3>
             <p>{poc.description}</p>
-            {poc.id !== 3 && (
+            {poc.id !== 3 && poc.id !== 1 && (
               <div className="poc-status">
                 <span className="status-label">Coming Soon</span>
               </div>
