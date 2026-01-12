@@ -31,13 +31,13 @@ app.post('/payhere-hash', (req, res) => {
         .digest('hex')
         .toUpperCase();
 
-    // Log this to your terminal to verify the values
+    // Log to terminal to verify the values DEBUG
     console.log(`Generating hash for Order: ${order_id}, Amount: ${formattedAmount}`);
 
     res.json({ hash });
 });
 
-// THIS WAS LIKELY MISSING:
+
 const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`PayHere POC backend running on http://localhost:${PORT}`);
