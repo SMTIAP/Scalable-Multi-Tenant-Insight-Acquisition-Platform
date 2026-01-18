@@ -22,7 +22,7 @@ const navigate = useNavigate();
 
     try {
         setLoading(true);
-        const res = await axios.post("http://localhost:5000/send-email", {
+        const res = await axios.post("http://localhost:5001/send-email", {
         to,
         subject,
         text: message,
