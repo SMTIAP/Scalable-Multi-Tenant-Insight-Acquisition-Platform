@@ -35,6 +35,8 @@ const POCHub = () => {
                 navigate(poc.path);
               } else if (poc.id === 3) {
                 navigate('/data-analysis');
+              } else if(poc.id === 4) {
+                navigate('/poc/EmailNotifications');
               } else {
                 alert(`Navigating to ${poc.title} POC - Implement this navigation!`);
               }
@@ -45,7 +47,7 @@ const POCHub = () => {
             </div>
             <h3>{poc.title}</h3>
             <p>{poc.description}</p>
-            {poc.id !== 3 && poc.id !== 1 && (
+            {poc.id !== 3 && poc.id !== 1 && poc.id !== 4 &&(
               <div className="poc-status">
                 <span className="status-label">Coming Soon</span>
               </div>
