@@ -1,0 +1,74 @@
+/* Send Email Button */
+.send-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #646cff; /* match your theme */
+  color: #fff;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.send-btn:hover {
+  background-color: #5458e0;
+  transform: translateY(-1px);
+}
+
+/* Heading */
+.email-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #646cff; /* main highlight color */
+}
+
+/* Container */
+.email-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.email-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* Input / Textarea */
+.email-container input,
+.email-container textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin: 10px 0;
+}
+
+.email-container input:focus,
+.email-container textarea:focus {
+  border-color: #646cff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .email-container {
+    padding: 18px;
+    margin: 20px;
+  }
+
+  .email-header h2 {
+    font-size: 1.5rem;
+  }
+}
