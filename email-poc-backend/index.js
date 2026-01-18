@@ -40,7 +40,7 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Backend running on port 5000"));
+app.listen(5001, () => console.log("Backend running on port 5001"));
 
 console.log(process.env.SMTP_USER);
 
