@@ -37,6 +37,8 @@ const POCHub = () => {
                 navigate('/data-analysis');
               } else if(poc.id === 4) {
                 navigate('/poc/EmailNotifications');
+              } else if(poc.id === 5) {
+                navigate('/poc/LoginPage');
               } else {
                 alert(`Navigating to ${poc.title} POC - Implement this navigation!`);
               }

@@ -1,0 +1,392 @@
+/* Full page background */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Container */
+.login-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #2d3d96 0%, #518aaa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Card */
+.login-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Header */
+.login-header {
+  background: linear-gradient(135deg, #2d3d96 0%, #518aaa 100%);
+  padding: 40px 30px;
+  color: white;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.login-subtitle {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+/* Body */
+.login-body {
+  padding: 40px 30px;
+}
+
+/* Message Boxes */
+.message-box {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.error-box {
+  background: #fee;
+  border: 1px solid #fcc;
+}
+
+.success-box {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.info-box {
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+.message-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.message-item:last-child {
+  margin-bottom: 0;
+}
+
+.error-box .message-item {
+  color: #c33;
+}
+
+.success-box .message-item {
+  color: #155724;
+}
+
+.info-box .message-item {
+  color: #0c5460;
+}
+
+.message-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #999;
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #667eea;
+}
+
+.password-input {
+  padding-right: 45px;
+}
+
+/* Password Toggle */
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.password-toggle:hover {
+  color: #667eea;
+}
+
+/* Password Strength */
+.password-strength {
+  margin-top: 10px;
+}
+
+.strength-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.strength-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.strength-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.strength-bar {
+  width: 100%;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg,#2d3d96 0%, #518aaa 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-button:hover:not(.loading) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.submit-button:active:not(.loading) {
+  transform: translateY(0);
+}
+
+.submit-button.loading {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  margin-right: 8px;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Toggle Mode */
+.toggle-mode {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.toggle-button:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider-text {
+  padding: 0 15px;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-button:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+  transform: translateY(-2px);
+}
+
+.social-button:active {
+  transform: translateY(0);
+}
+
+.social-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.social-text {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Social User Info */
+.social-user-info {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.social-user-title {
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.social-user-data {
+  font-size: 12px;
+  color: #666;
+  overflow: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-header {
+    padding: 30px 20px;
+  }
+
+  .login-title {
+    font-size: 26px;
+  }
+
+  .login-body {
+    padding: 30px 20px;
+  }
+
+  .social-buttons {
+    grid-template-columns: 1fr;
+  }
+}
